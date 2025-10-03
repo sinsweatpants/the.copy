@@ -53,13 +53,13 @@
       "overridden": false
     },
     "@vitest/coverage-v8": {
-      "version": "2.1.9",
-      "resolved": "https://registry.npmjs.org/@vitest/coverage-v8/-/coverage-v8-2.1.9.tgz",
+      "version": "3.2.4",
+      "resolved": "https://registry.npmjs.org/@vitest/coverage-v8/-/coverage-v8-3.2.4.tgz",
       "overridden": false
     },
     "@vitest/ui": {
-      "version": "2.1.9",
-      "resolved": "https://registry.npmjs.org/@vitest/ui/-/ui-2.1.9.tgz",
+      "version": "3.2.4",
+      "resolved": "https://registry.npmjs.org/@vitest/ui/-/ui-3.2.4.tgz",
       "overridden": false
     },
     "autoprefixer": {
@@ -85,6 +85,11 @@
     "eslint": {
       "version": "9.36.0",
       "resolved": "https://registry.npmjs.org/eslint/-/eslint-9.36.0.tgz",
+      "overridden": false
+    },
+    "globals": {
+      "version": "16.4.0",
+      "resolved": "https://registry.npmjs.org/globals/-/globals-16.4.0.tgz",
       "overridden": false
     },
     "jsdom": {
@@ -143,8 +148,8 @@
       "overridden": false
     },
     "vitest": {
-      "version": "2.1.9",
-      "resolved": "https://registry.npmjs.org/vitest/-/vitest-2.1.9.tgz",
+      "version": "3.2.4",
+      "resolved": "https://registry.npmjs.org/vitest/-/vitest-3.2.4.tgz",
       "overridden": false
     }
   }
