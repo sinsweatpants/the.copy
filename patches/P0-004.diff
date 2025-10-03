@@ -1,0 +1,11 @@
+--- a/src/config/environment.ts
++++ b/src/config/environment.ts
+@@ -1,6 +1,6 @@
+-export const getGeminiApiKey = () => {
+-  import.meta.env.VITE_GEMINI_API_KEY;
+-}
++export const getGeminiApiKey = (): string => {
++  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
++  if (!apiKey) throw new Error("VITE_GEMINI_API_KEY is not set");
++  return apiKey;
++};
