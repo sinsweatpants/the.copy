@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Loader2, BarChart3, MessageSquare, Users } from 'lucide-react';
 import AnalysisService, { type AnalysisResult } from '../../services/AnalysisService';
 import { AIWritingAssistant, ScreenplayClassifier } from '../editor/CleanIntegratedScreenplayEditor';
@@ -29,7 +29,6 @@ const NaqidDashboard: React.FC = () => {
       const result = await analysisService.analyze(structured, scriptText);
       setAnalysisResult(result);
     } catch (err) {
-      console.error('Failed to analyse screenplay:', err);
       setError('حدث خطأ غير متوقع أثناء التحليل. حاول مرة أخرى.');
     } finally {
       setIsAnalyzing(false);

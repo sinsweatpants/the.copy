@@ -57,7 +57,6 @@ class InstructionsLoader {
       const instructions = await response.json();
       return this.validateInstructions(instructions);
     } catch (error) {
-      console.warn(`Failed to load instructions for ${agentId}, using fallback`);
       return this.getFallbackInstructions(agentId);
     }
   }

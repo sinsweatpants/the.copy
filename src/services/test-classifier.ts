@@ -90,7 +90,7 @@ class ScreenplayClassifier {
    * @returns {boolean} True when punctuation is detected; otherwise false.
    */
   static hasSentencePunctuation(s: string) {
-    return /[\.!\؟\?]/.test(s);
+    return /[.!؟?]/.test(s);
   }
 
   /**
@@ -326,7 +326,6 @@ const testCases: { line: string; expected: string; description: string }[] = [
   }
 ];
 
-console.log("Testing ScreenplayClassifier improvements...\n");
 
 let passed = 0;
 let total = testCases.length;
@@ -335,18 +334,11 @@ for (const testCase of testCases) {
   const result = ScreenplayClassifier.isLikelyAction(testCase.line) ? "action" : "dialogue";
   const isPass = result === testCase.expected;
   
-  console.log(`Test: ${testCase.description}`);
-  console.log(`Line: ${testCase.line}`);
-  console.log(`Expected: ${testCase.expected}, Got: ${result}`);
-  console.log(`Result: ${isPass ? "PASS" : "FAIL"}\n`);
   
   if (isPass) passed++;
 }
 
-console.log(`\nTest Results: ${passed}/${total} passed`);
 
 if (passed === total) {
-  console.log("All tests passed! The classifier improvements are working correctly.");
 } else {
-  console.log("Some tests failed. Please review the classifier logic.");
 }

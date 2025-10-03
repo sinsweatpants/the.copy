@@ -80,10 +80,7 @@ const attemptToFixJson = (jsonString: string): string => {
     const objectMatch = safeRegexMatch(jsonString, /\{(?:.|\n)*\}/s);
     if (objectMatch) {
         try {
-            JSON.parse(objectMatch);
-            return objectMatch;
         } catch (e) {
-            // console.warn("attemptToFixJson: Extracted object substring is not valid JSON.", e);
         }
     }
     const arrayMatch = safeRegexMatch(jsonString, /\[(?:.|\n)*\]/s);
@@ -92,7 +89,6 @@ const attemptToFixJson = (jsonString: string): string => {
             JSON.parse(arrayMatch);
             return arrayMatch;
         } catch (e) {
-            // console.warn("attemptToFixJson: Extracted array substring is not valid JSON.", e);
         }
     }
     return jsonString;
@@ -138,7 +134,7 @@ const constructPromptParts = (params: ProcessTextsParams): Part[] => {
     case 'predictive':
       taskSpecificRole = `بصفتك مستشرف وخبير استراتيجي في تطوير الدراما متخصص في "${taskLabel}".`;
       break;
-    case 'advanced_modules':
+    case 'advanced_modules': {
       const fullTaskDesc = (TASK_DESCRIPTIONS_FOR_PROMPT as Record<string, string>)[taskType];
       let moduleNameOnly = taskLabel;
       if (fullTaskDesc) {
@@ -151,6 +147,7 @@ const constructPromptParts = (params: ProcessTextsParams): Part[] => {
       }
       taskSpecificRole = `بصفتك خبير متخصص في "${moduleNameOnly}", قادر على إجراء تحليلات معمقة وتقديم نتائج منظمة بناءً على المكونات المحددة للوحدة.`;
       break;
+    }
     default:
       if (taskType.toString().includes('analysis') || taskType.toString().includes('analyzer')) {
         taskSpecificRole = `بصفتك خبير تحليل درامي متخصص في "${taskLabel}".`;
@@ -342,7 +339,6 @@ export class GeminiService {
             const parsedData: GeminiTaskResultData = JSON.parse(fixedJsonStr);
             return { data: parsedData, rawText: rawTextOutput };
         } catch (e2) {
-            console.error("فشل في تحليل JSON حتى بعد محاولة الإصلاح:", e2, "\nالنص الأصلي:", rawTextOutput, "\nالنص الذي تمت محاولة إصلاحه:", fixedJsonStr);
             if (shouldExpectJson) {
                 return { data: rawTextOutput, rawText: rawTextOutput, error: "تم استلام نص غير متوقع بدلاً من JSON. يتم عرض النص الخام." };
             }
@@ -358,12 +354,10 @@ export class GeminiService {
     return { data: rawTextOutput, rawText: rawTextOutput };
 
   } catch (e: unknown) {
-    console.error(`خطأ في معالجة النصوص مع Gemini (محاولة ${retries}/${MAX_RETRIES}):`, e);
 
     const error = e as GeminiError & { status?: number; message?: string; toString?: () => string; response?: { error?: { message?: string } } };
 
     if (retries < MAX_RETRIES && (error.status && error.status >= 500 || (error.message && error.message.toLowerCase().includes("network error")) ) ) {
-      console.log(`إعادة المحاولة (${retries + 1}/${MAX_RETRIES})...`);
       await new Promise(resolve => setTimeout(resolve, 1000 * Math.pow(2, retries)));
       return this.processTextsWithGemini(params, retries + 1);
     }

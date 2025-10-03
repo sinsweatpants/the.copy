@@ -86,7 +86,6 @@ export default class AnalysisService {
       const response = await this.aiAssistant.generateText(prompt, context, { mode: 'analysis' });
       return response.text ?? 'تعذر توليد الاستجابة بواسطة الذكاء الاصطناعي.';
     } catch (error) {
-      console.error('AI insight generation failed:', error);
       return 'حدث خطأ أثناء توليد الاستجابة من الذكاء الاصطناعي.';
     }
   }

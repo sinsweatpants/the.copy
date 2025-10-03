@@ -221,7 +221,6 @@ const AdvancedAgentsPopup: React.FC<AdvancedAgentsPopupProps> = ({ isOpen, onClo
       setAnalysisResults(prev => [newResult, ...prev]);
       setActiveTab('results');
     } catch (error) {
-      console.error('Agent analysis failed:', error);
     } finally {
       setIsAnalyzing(false);
     }
@@ -279,7 +278,6 @@ const AdvancedAgentsPopup: React.FC<AdvancedAgentsPopupProps> = ({ isOpen, onClo
       );
       setAgentOutput(JSON.stringify(result, null, 2));
     } catch (error) {
-      console.error("Analysis failed:", error);
       setAgentOutput("An error occurred during analysis.");
     } finally {
       setIsAnalyzing(false);

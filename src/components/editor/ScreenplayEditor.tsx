@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import * as React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import { 
@@ -79,7 +80,7 @@ class ScreenplayClassifier {
   }
 
   static hasSentencePunctuation(s: string): boolean {
-    return /[\.!\؟\?]/.test(s);
+    return /[.!\?؟]/.test(s);
   }
 
   static wordCount(s: string): number {
@@ -470,7 +471,6 @@ export default function ScreenplayEditor({ onBack }: ScreenplayEditorProps) {
         case 's':
         case 'S':
           e.preventDefault();
-          console.log('Save functionality would go here');
           break;
         case 'f':
         case 'F':
