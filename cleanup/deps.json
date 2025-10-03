@@ -1,0 +1,322 @@
+{
+  "App.tsx": [
+    "components/AgentsPage.tsx",
+    "components/ExportPage.tsx",
+    "components/HomePage.tsx",
+    "components/InstructionsPage.tsx",
+    "components/ProjectsPage.tsx",
+    "components/SettingsPage.tsx",
+    "components/TemplatesPage.tsx",
+    "components/editor/ProductionReadyScreenplayEditor.tsx",
+    "components/editor/ScreenplayEditor.tsx"
+  ],
+  "agents/advanced_module_output_structure.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/analysisAgent.ts": [
+    "agents/core/integratedAgent.ts",
+    "types/types.ts"
+  ],
+  "agents/analysis/characterDeepAnalyzerAgent.ts": [
+    "agents/analysis/characterDeepAnalyzerConfig.ts",
+    "agents/core/fileReaderService.ts",
+    "agents/core/integratedAgent.ts",
+    "types/types.ts"
+  ],
+  "agents/analysis/characterDeepAnalyzerConfig.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/characterNetworkAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/characterVoiceAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/config.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/conflictDynamicsAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/culturalHistoricalAnalyzerAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/dialogueAdvancedAnalyzerAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/dialogueForensicsAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/literaryQualityAnalyzerAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/plotPredictorAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/producibilityAnalyzerAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/rhythmMappingAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/targetAudienceAnalyzerAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/thematicMiningAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/themesMessagesAnalyzerAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/analysis/visualCinematicAnalyzerAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/core/fileReaderService.ts": [],
+  "agents/core/geminiService.ts": [
+    "agents/core/fileReaderService.ts",
+    "agents/instructions/prompts.ts",
+    "config/index.ts",
+    "lib/ai/geminiTypes.ts",
+    "types/types.ts"
+  ],
+  "agents/core/index.ts": [
+    "services/instructions-loader.ts",
+    "types/types.ts"
+  ],
+  "agents/core/integratedAgent.ts": [
+    "agents/core/geminiService.ts",
+    "config/agents.ts",
+    "types/types.ts"
+  ],
+  "agents/core/integratedAgentConfig.ts": [
+    "types/types.ts"
+  ],
+  "agents/evaluation/audienceResonanceAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/evaluation/tensionOptimizerAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/generation/completionAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/generation/creativeAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/generation/recommendationsGeneratorAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/generation/sceneGeneratorAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/generation/worldBuilderAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/adaptive_rewriting_instructions.ts": [],
+  "agents/instructions/analysis_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/audience_resonance_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/character_deep_analyzer_instructions.ts": [
+    "agents/advanced_module_output_structure.ts",
+    "types/types.ts"
+  ],
+  "agents/instructions/character_network_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/character_voice_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/completion_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/conflict_dynamics_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/creative_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/cultural_historical_analyzer_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/dialogue_advanced_analyzer_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/dialogue_forensics_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/integrated_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/literary_quality_analyzer_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/platform_adapter_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/plot_predictor_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/producibility_analyzer_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/prompts.ts": [],
+  "agents/instructions/recommendations_generator_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/rhythm_mapping_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/scene_generator_instructions.ts": [],
+  "agents/instructions/style_fingerprint_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/target_audience_analyzer_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/tension_optimizer_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/thematic_mining_instructions.ts": [
+    "agents/advanced_module_output_structure.ts",
+    "types/types.ts"
+  ],
+  "agents/instructions/themes_messages_analyzer_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/visual_cinematic_analyzer_instructions.ts": [
+    "types/types.ts"
+  ],
+  "agents/instructions/world_builder_instructions.ts": [
+    "agents/advanced_module_output_structure.ts",
+    "types/types.ts"
+  ],
+  "agents/transformation/adaptiveRewritingAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/transformation/platformAdapterAgent.ts": [
+    "types/types.ts"
+  ],
+  "agents/transformation/styleFingerprintAgent.ts": [
+    "types/types.ts"
+  ],
+  "components/AgentsPage.tsx": [],
+  "components/ExportPage.tsx": [],
+  "components/HomePage.tsx": [],
+  "components/InstructionsPage.tsx": [],
+  "components/ProjectsPage.tsx": [],
+  "components/SettingsPage.tsx": [],
+  "components/TemplatesPage.tsx": [],
+  "components/editor/AdvancedAgentsPopup.tsx": [
+    "agents/analysis/analysisAgent.ts",
+    "agents/analysis/characterDeepAnalyzerAgent.ts",
+    "agents/core/fileReaderService.ts",
+    "config/agentConfigs.ts",
+    "config/environment.ts",
+    "types/types.ts"
+  ],
+  "components/editor/CleanIntegratedScreenplayEditor.tsx": [
+    "components/editor/AdvancedAgentsPopup.tsx",
+    "modules/text/domTextReplacement.ts",
+    "types/types.ts"
+  ],
+  "components/editor/EnhancedScreenplayEditor.tsx": [],
+  "components/editor/ProductionReadyScreenplayEditor.tsx": [],
+  "components/editor/ScreenplayEditor-backup.tsx": [],
+  "components/editor/ScreenplayEditor-fixed.tsx": [],
+  "components/editor/ScreenplayEditor-original.tsx": [],
+  "components/editor/ScreenplayEditor.tsx": [],
+  "components/editor/__tests__/AdvancedAgentsPopup.test.tsx": [
+    "components/editor/AdvancedAgentsPopup.tsx"
+  ],
+  "components/editor/textReplacement.ts": [
+    "modules/text/domTextReplacement.ts"
+  ],
+  "components/naqid/NaqidDashboard.tsx": [
+    "components/editor/CleanIntegratedScreenplayEditor.tsx",
+    "services/AnalysisService.ts"
+  ],
+  "config/agentConfigs.ts": [
+    "agents/analysis/characterDeepAnalyzerConfig.ts",
+    "agents/analysis/characterNetworkAgent.ts",
+    "agents/analysis/characterVoiceAgent.ts",
+    "agents/analysis/config.ts",
+    "agents/analysis/conflictDynamicsAgent.ts",
+    "agents/analysis/culturalHistoricalAnalyzerAgent.ts",
+    "agents/analysis/dialogueAdvancedAnalyzerAgent.ts",
+    "agents/analysis/dialogueForensicsAgent.ts",
+    "agents/analysis/literaryQualityAnalyzerAgent.ts",
+    "agents/analysis/plotPredictorAgent.ts",
+    "agents/analysis/producibilityAnalyzerAgent.ts",
+    "agents/analysis/rhythmMappingAgent.ts",
+    "agents/analysis/targetAudienceAnalyzerAgent.ts",
+    "agents/analysis/thematicMiningAgent.ts",
+    "agents/analysis/themesMessagesAnalyzerAgent.ts",
+    "agents/analysis/visualCinematicAnalyzerAgent.ts",
+    "agents/core/integratedAgentConfig.ts",
+    "agents/evaluation/audienceResonanceAgent.ts",
+    "agents/evaluation/tensionOptimizerAgent.ts",
+    "agents/generation/completionAgent.ts",
+    "agents/generation/creativeAgent.ts",
+    "agents/generation/recommendationsGeneratorAgent.ts",
+    "agents/generation/sceneGeneratorAgent.ts",
+    "agents/generation/worldBuilderAgent.ts",
+    "agents/transformation/adaptiveRewritingAgent.ts",
+    "agents/transformation/platformAdapterAgent.ts",
+    "agents/transformation/styleFingerprintAgent.ts"
+  ],
+  "config/agents.ts": [],
+  "config/environment.ts": [],
+  "config/index.ts": [
+    "config/agentConfigs.ts",
+    "config/agents.ts",
+    "config/environment.ts",
+    "config/prompts.ts"
+  ],
+  "config/prompts.ts": [
+    "types/types.ts"
+  ],
+  "lib/ai/__mocks__/gemini.payloads.ts": [
+    "lib/ai/geminiTypes.ts"
+  ],
+  "lib/ai/__tests__/geminiService.test.ts": [
+    "agents/core/fileReaderService.ts",
+    "agents/core/geminiService.ts",
+    "config/index.ts",
+    "lib/ai/__mocks__/gemini.payloads.ts",
+    "types/types.ts"
+  ],
+  "lib/ai/geminiTypes.ts": [],
+  "main.tsx": [
+    "App.tsx",
+    "style.css"
+  ],
+  "modules/text/domTextReplacement.ts": [],
+  "services/AnalysisService.ts": [
+    "types/types.ts"
+  ],
+  "services/agent-instructions.ts": [
+    "services/instructions-loader.ts"
+  ],
+  "services/counter.ts": [],
+  "services/instructions-loader.ts": [],
+  "services/test-classifier.ts": [],
+  "services/test-instructions-system.ts": [
+    "services/agent-instructions.ts"
+  ],
+  "style.css": [],
+  "tests/setup.ts": [],
+  "tests/unit/agents-facade.test.ts": [
+    "agents/core/index.ts"
+  ],
+  "tests/unit/instructions-loader.test.ts": [
+    "services/instructions-loader.ts"
+  ],
+  "tests/unit/screenplay-classifier.test.ts": [
+    "components/editor/CleanIntegratedScreenplayEditor.tsx"
+  ],
+  "types/types.ts": [],
+  "utils/sanitizer.ts": []
+}

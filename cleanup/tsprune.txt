@@ -1,0 +1,80 @@
+src/App.tsx:13 - default
+src/config/index.ts:17 - AgentsConfig
+src/config/index.ts:25 - agentsConfig
+src/config/index.ts:6 - EnvironmentConfig
+src/config/index.ts:40 - AGENT_CONFIGS
+src/services/agent-instructions.ts:8 - AgentInstructionsService (used in module)
+src/services/agent-instructions.ts:85 - InstructionSet (used in module)
+src/services/AnalysisService.ts:3 - CharacterDialogueStat (used in module)
+src/services/AnalysisService.ts:16 - AIWritingAssistantLike (used in module)
+src/services/counter.ts:6 - setupCounter
+src/services/test-instructions-system.ts:155 - quickTest
+src/services/test-instructions-system.ts:37 - InstructionsSystemTester (used in module)
+src/services/test-instructions-system.ts:142 - TestResults (used in module)
+src/services/test-instructions-system.ts:152 - instructionsTester
+src/types/types.ts:95 - CompletionEnhancementOption
+src/types/types.ts:215 - AIWritingAssistantLike
+src/utils/sanitizer.ts:10 - sanitizeHTML
+src/utils/sanitizer.ts:23 - sanitizeContentEditable
+src/utils/sanitizer.ts:38 - sanitizeUserInput
+src/utils/sanitizer.ts:57 - sanitizeFilename
+src/utils/sanitizer.ts:87 - generateCSPHeader
+src/utils/sanitizer.ts:71 - CSP_CONFIG (used in module)
+src/agents/analysis/analysisAgent.ts:46 - ANALYSIS_AGENT_CONFIG (used in module)
+src/agents/core/fileReaderService.ts:78 - processFilesForGemini
+src/agents/core/geminiService.ts:56 - GeminiTaskResultData (used in module)
+src/agents/core/geminiService.ts:65 - GeminiServiceResponse (used in module)
+src/agents/core/index.ts:111 - AgentExecutor (used in module)
+src/agents/generation/creativeAgent.ts:4 - CREATIVE_AGENT_CONFIG (used in module)
+src/agents/instructions/analysis_instructions.ts:4 - ANALYSIS_INSTRUCTIONS
+src/agents/instructions/audience_resonance_instructions.ts:4 - audienceResonanceInstructions (used in module)
+src/agents/instructions/audience_resonance_instructions.ts:31 - audienceResonanceAgentConfig
+src/agents/instructions/character_deep_analyzer_instructions.ts:5 - CHARACTER_DEEP_ANALYZER_INSTRUCTIONS
+src/agents/instructions/character_network_instructions.ts:4 - CHARACTER_NETWORK_INSTRUCTIONS
+src/agents/instructions/character_voice_instructions.ts:4 - characterVoiceInstructions (used in module)
+src/agents/instructions/character_voice_instructions.ts:26 - characterVoiceAgentConfig
+src/agents/instructions/completion_instructions.ts:4 - completionInstructions (used in module)
+src/agents/instructions/completion_instructions.ts:15 - completionAgentConfig
+src/agents/instructions/conflict_dynamics_instructions.ts:4 - CONFLICT_DYNAMICS_INSTRUCTIONS
+src/agents/instructions/creative_instructions.ts:4 - CREATIVE_INSTRUCTIONS
+src/agents/instructions/cultural_historical_analyzer_instructions.ts:4 - culturalHistoricalAnalyzerInstructions (used in module)
+src/agents/instructions/cultural_historical_analyzer_instructions.ts:37 - culturalHistoricalAnalyzerAgentConfig
+src/agents/instructions/dialogue_advanced_analyzer_instructions.ts:4 - dialogueAdvancedAnalyzerInstructions (used in module)
+src/agents/instructions/dialogue_advanced_analyzer_instructions.ts:38 - dialogueAdvancedAnalyzerAgentConfig
+src/agents/instructions/dialogue_forensics_instructions.ts:4 - DIALOGUE_FORENSICS_INSTRUCTIONS
+src/agents/instructions/integrated_instructions.ts:4 - integratedInstructions (used in module)
+src/agents/instructions/integrated_instructions.ts:31 - integratedAgentConfig
+src/agents/instructions/literary_quality_analyzer_instructions.ts:4 - literaryQualityAnalyzerInstructions (used in module)
+src/agents/instructions/literary_quality_analyzer_instructions.ts:40 - literaryQualityAnalyzerAgentConfig
+src/agents/instructions/platform_adapter_instructions.ts:4 - platformAdapterInstructions (used in module)
+src/agents/instructions/platform_adapter_instructions.ts:44 - platformAdapterAgentConfig
+src/agents/instructions/plot_predictor_instructions.ts:4 - plotPredictorInstructions (used in module)
+src/agents/instructions/plot_predictor_instructions.ts:33 - plotPredictorAgentConfig
+src/agents/instructions/producibility_analyzer_instructions.ts:4 - producibilityAnalyzerInstructions (used in module)
+src/agents/instructions/producibility_analyzer_instructions.ts:38 - producibilityAnalyzerAgentConfig
+src/agents/instructions/recommendations_generator_instructions.ts:4 - recommendationsGeneratorInstructions (used in module)
+src/agents/instructions/recommendations_generator_instructions.ts:36 - recommendationsGeneratorAgentConfig
+src/agents/instructions/rhythm_mapping_instructions.ts:4 - rhythmMappingInstructions (used in module)
+src/agents/instructions/rhythm_mapping_instructions.ts:41 - rhythmMappingAgentConfig
+src/agents/instructions/style_fingerprint_instructions.ts:4 - styleFingerprintInstructions (used in module)
+src/agents/instructions/style_fingerprint_instructions.ts:49 - styleFingerprintAgentConfig
+src/agents/instructions/target_audience_analyzer_instructions.ts:4 - targetAudienceAnalyzerInstructions (used in module)
+src/agents/instructions/target_audience_analyzer_instructions.ts:38 - targetAudienceAnalyzerAgentConfig
+src/agents/instructions/tension_optimizer_instructions.ts:4 - tensionOptimizerInstructions (used in module)
+src/agents/instructions/tension_optimizer_instructions.ts:37 - tensionOptimizerAgentConfig
+src/agents/instructions/thematic_mining_instructions.ts:5 - THEMATIC_MINING_INSTRUCTIONS
+src/agents/instructions/themes_messages_analyzer_instructions.ts:4 - themesMessagesAnalyzerInstructions (used in module)
+src/agents/instructions/themes_messages_analyzer_instructions.ts:63 - themesMessagesAnalyzerAgentConfig
+src/agents/instructions/visual_cinematic_analyzer_instructions.ts:4 - visualCinematicAnalyzerInstructions (used in module)
+src/agents/instructions/visual_cinematic_analyzer_instructions.ts:76 - visualCinematicAnalyzerAgentConfig
+src/agents/instructions/world_builder_instructions.ts:5 - WORLD_BUILDER_INSTRUCTIONS
+src/components/editor/CleanIntegratedScreenplayEditor.tsx:2086 - default
+src/components/editor/EnhancedScreenplayEditor.tsx:141 - default
+src/components/editor/ScreenplayEditor-backup.tsx:268 - default
+src/components/editor/ScreenplayEditor-fixed.tsx:268 - default
+src/components/editor/ScreenplayEditor-original.tsx:268 - default
+src/components/editor/textReplacement.ts:5 - applyRegexReplacementToTextNodes
+src/components/naqid/NaqidDashboard.tsx:142 - default
+src/lib/ai/geminiTypes.ts:104 - isSchemaError
+src/lib/ai/__mocks__/gemini.payloads.ts:90 - mockApiError429
+src/lib/ai/__mocks__/gemini.payloads.ts:117 - mockSchemaError
