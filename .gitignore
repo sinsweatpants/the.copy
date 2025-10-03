@@ -19,6 +19,7 @@ node_modules
 dist
 dist-ssr
 *.local
+/home/user/the.copy/docs
 
 
 
