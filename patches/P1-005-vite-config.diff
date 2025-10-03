@@ -1,0 +1,24 @@
+--- a/vite.config.ts
++++ b/vite.config.ts
+@@ -10,6 +10,22 @@
+     react(),
+   ],
+   build: {
++    rollupOptions: {
++      output: {
++        manualChunks: {
++          'vendor-react': ['react', 'react-dom'],
++          'vendor-ui': ['lucide-react'],
++          'vendor-ai': ['@google/generative-ai'],
++        },
++      },
++    },
++    chunkSizeWarningLimit: 1000,
++    minify: 'terser',
++    terserOptions: {
++      compress: {
++        drop_console: true,
++      },
++    },
+   },
+ });
