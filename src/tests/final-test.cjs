@@ -30,7 +30,7 @@ class ScreenplayClassifier {
   }
 
   static hasSentencePunctuation(s) {
-    return /[\.!\؟\?]/.test(s);
+    return /[.!؟?]/.test(s);
   }
 
   static wordCount(s) {

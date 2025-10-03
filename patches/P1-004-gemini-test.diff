@@ -1,0 +1,11 @@
+--- a/src/lib/ai/__tests__/geminiService.test.ts
++++ b/src/lib/ai/__tests__/geminiService.test.ts
+@@ -19,7 +19,7 @@
+   });
+   
+   it('should handle API errors gracefully', async () => {
+-    mockGenerateContent.mockRejectedValue(new Error('API Error'));
++    mockGenerateContent.mockRejectedValueOnce(new Error('API Error'));
+     
+     await expect(geminiService.analyze('test')).rejects.toThrow('API Error');
+   });

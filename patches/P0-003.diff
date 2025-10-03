@@ -1,0 +1,11 @@
+--- a/src/components/editor/ScreenplayEditor.tsx
++++ b/src/components/editor/ScreenplayEditor.tsx
+@@ -2,7 +2,7 @@
+ import { Button } from "@/components/ui/button";
+ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+ import { ScrollArea } from "@/components/ui/scroll-area";
+-import { geminiService } from "@/lib/ai/geminiService";
++import { geminiService } from "../../lib/ai/geminiService";
+ import { useEffect, useState } from "react";
+ 
+ const ScreenplayEditor = () => {

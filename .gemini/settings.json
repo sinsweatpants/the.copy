@@ -1,0 +1,56 @@
+{
+    "mcpServers": {
+      "context7": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@upstash/context7-mcp"
+        ],
+        "env": {
+          "DEFAULT_MINIMUM_TOKENS": ""
+        }
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "K:/agents cruser"
+        ]
+      },
+      "sequentialthinking": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking"
+        ]
+      },
+      "github": {
+        "command": "docker",
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "-e",
+          "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "-e",
+          "GITHUB_TOOLSETS",
+          "-e",
+          "GITHUB_READ_ONLY",
+          "ghcr.io/github/github-mcp-server"
+        ],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "hp_aDcNpog4wTM3tdPY98RhXlkGRHq0Hv1s6jY8",
+          "GITHUB_TOOLSETS": "",
+          "GITHUB_READ_ONLY": ""
+        }
+      },
+      "puppeteer": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-puppeteer"
+        ]
+      }
+    }
+  }

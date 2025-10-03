@@ -58,7 +58,7 @@ class NotificationManager {
 }
 
 class AIWritingAssistant {
-  async generateText(prompt: string, context: string) {
+  async generateText(prompt: string, context: string): Promise<{ text: string }> {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({

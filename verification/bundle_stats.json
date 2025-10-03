@@ -1,0 +1,46 @@
+{
+  "total_size": "1.5M",
+  "chunks": [
+  {
+    "size": [
+      "17598",
+      "dist/assets/ui-BJQoLleL.js"
+    ],
+    "file": [
+      "17598",
+      "dist/assets/ui-BJQoLleL.js"
+    ]
+  },
+  {
+    "size": [
+      "11762",
+      "dist/assets/vendor-CiW5Bwbg.js"
+    ],
+    "file": [
+      "11762",
+      "dist/assets/vendor-CiW5Bwbg.js"
+    ]
+  },
+  {
+    "size": [
+      "45",
+      "dist/assets/agents-l0sNRNKZ.js"
+    ],
+    "file": [
+      "45",
+      "dist/assets/agents-l0sNRNKZ.js"
+    ]
+  },
+  {
+    "size": [
+      "249788",
+      "dist/assets/index-CuPtYaho.js"
+    ],
+    "file": [
+      "249788",
+      "dist/assets/index-CuPtYaho.js"
+    ]
+  }
+],
+  "timestamp": "2025-10-03T08:43:20+00:00"
+}

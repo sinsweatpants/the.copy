@@ -141,7 +141,6 @@ export class SimpleAgentExecutor implements AgentExecutor {
       };
     } catch (error) {
       // Fallback to basic processing
-      console.warn(`Failed to load instructions for ${agentId}:`, error);
       return {
         agentId,
         input,

@@ -52,7 +52,6 @@ export class AgentInstructionsService {
     try {
       return await this.getInstructions(agentId);
     } catch (error) {
-      console.error(`Failed to load instructions for agent ${agentId}:`, error);
       return null;
     }
   }

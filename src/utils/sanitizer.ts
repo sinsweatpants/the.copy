@@ -41,7 +41,7 @@ export function sanitizeUserInput(input: string): string {
   }
 
   // Remove null bytes and control characters except newlines and tabs
-  let cleaned = input.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+  let cleaned = input.replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '');
   
   // Limit length to prevent DoS
   if (cleaned.length > 100000) {

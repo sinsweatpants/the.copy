@@ -142,9 +142,7 @@ class AutoSaveManager {
         try {
           await this.saveCallback(this.currentContent);
           this.lastSaved = this.currentContent;
-          console.log('Auto-saved at:', new Date().toLocaleTimeString());
         } catch (error) {
-          console.error('Auto-save failed:', error);
         }
       }
     }, this.intervalMs);
@@ -1574,7 +1572,6 @@ Suggestions:
     // Set up auto-save
     autoSaveManager.current.setSaveCallback(async (content) => {
       // In a real implementation, this would save to a database or file
-      console.log('Auto-saved content:', content);
     });
     autoSaveManager.current.startAutoSave();
     

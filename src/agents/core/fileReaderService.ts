@@ -85,7 +85,6 @@ export const processFilesForGemini = async (files: File[]): Promise<ProcessedFil
           const content = await readFileAsText(file);
           return { name, mimeType, content, isBase64: false, size };
         } catch (e: any) {
-          console.error(`Error reading text file ${name} (${mimeType}):`, e);
           return { name, mimeType, content: `[Error: تعذر قراءة الملف النصي '${name}'. السبب: ${e.message || 'فشل غير معروف في قراءة الملف.'}]`, isBase64: false, size };
         }
       }
@@ -95,7 +94,6 @@ export const processFilesForGemini = async (files: File[]): Promise<ProcessedFil
           const arrayBuffer = await readFileAsArrayBuffer(file);
           const result = await mammoth.extractRawText({ arrayBuffer });
           if (!result.value || result.value.trim() === "") {
-            console.warn(`Mammoth.js extracted empty or whitespace-only content from DOCX ${name}. Messages: ${JSON.stringify(result.messages)}`);
             return { 
               name, 
               mimeType, 
@@ -106,7 +104,6 @@ export const processFilesForGemini = async (files: File[]): Promise<ProcessedFil
           }
           return { name, mimeType, content: result.value, isBase64: false, size };
         } catch (error: any) {
-          console.error(`Error processing DOCX file ${name}:`, error);
           return { name, mimeType, content: `[Error: تعذر استخراج النص من ملف DOCX '${name}'. السبب: ${error.message || 'الملف تالف أو غير مدعوم من قبل mammoth.js. يرجى التأكد أن الملف غير محمي بكلمة مرور وأن محتواه نصي بشكل أساسي.'}]`, isBase64: false, size };
         }
       }
@@ -126,7 +123,6 @@ export const processFilesForGemini = async (files: File[]): Promise<ProcessedFil
           const content = await readFileAsBase64(file);
           return { name, mimeType, content, isBase64: true, size };
         } catch (e: any) {
-          console.error(`Error reading base64 file ${name} (${mimeType}):`, e);
           // For base64, even if there's an error, the content field should be a string.
           // isBase64: true is problematic if content is an error string. Let's set to false here.
           // Gemini service will check isBase64 and then if content is an error string.
@@ -135,12 +131,10 @@ export const processFilesForGemini = async (files: File[]): Promise<ProcessedFil
       }
       
       // Fallback for other unknown types
-      console.warn(`Unsupported file type ${mimeType} for file ${name}. Attempting to read as text, but this might not be effective.`);
       try {
         const content = await readFileAsText(file);
         return { name, mimeType, content: `[ملاحظة: تم التعامل مع الملف ${name} (${mimeType}) كملف نصي. قد لا تكون هذه المعالجة مثالية إذا لم يكن الملف نصيًا بالفعل.]\n${content}`, isBase64: false, size };
       } catch (e: any) {
-        console.error(`Could not read file ${name} as text or base64.`, e);
         return { name, mimeType, content: `[Error: تعذر قراءة محتوى الملف ${name} (${mimeType}). الملف قد يكون تالفًا أو من نوع غير مدعوم بشكل كامل للمعالجة المباشرة. السبب: ${e.message || 'فشل غير معروف.'}]`, isBase64: false, size };
       }
     })
